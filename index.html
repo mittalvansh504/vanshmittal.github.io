@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+     <hr class="hr">
+      <!-- <hr> -->
+    <header class="header">
+      <a href="#" class="logo">Portfolio</a>
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about"><b>About</b></a>
+        <a href="#skills"><b>Skills</b></a>
+        <a href="#portfolio"><b>Portfolio</b></a>
+        <a href="#contact"><b>Contact</b></a>
+      </nav>
+    </header>
+    
+    <!-- Home Section -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello, I'm</h3>
+        <h1>Vansh Mittal</h1>
+        <h3>And I'm a <span class="multiple-text"></span></h3>
+        <p>I am a Computer Science student passionate about building full-stack
+          applications
+          and working with modern technologies like Java, Spring Boot, MERN
+          stack,
+          and Data Analytics. I love developing web platforms such as
+          **Job portals, Object Detection Model and boosting tourism**, and
+          continuously
+          explore new frameworks to improve my skills.</p>
+
+        <div class="social-media">
+          <a href="mailto:mittalvansh504@gmail.com" target="_blank"><i 
+              class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/vansh-mittal-/" target="_blank"><i
+              class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/mittalvansh504" target="_blank"><i
+              class="fa-brands fa-github"></i>
+        </div>
+
+        <a href="resume/Vansh Main Resume.pdf" download="Vansh_Resume.pdf" class="btn">Download Resume</a>
+
+      </div>
+
+      <div class="home-img">
+        <img src="images/new_img.png" alt>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="images/vansh_2img.jpg" alt>
+      </div>
+
+      <div class="about-content">
+    <h2>About Me</h2>
+    <p>
+      Hi, I’m Vansh 👋, a passionate software developer and Web Developer, who loves creating 
+      clean, modern, and user-friendly websites. I enjoy solving problems 
+      and turning ideas into reality using code. <span id="dots"></span>
+      <span id="more">
+        I specialize in backend development with Java (Spring Boot, JDBC) 
+        and also have experience in frontend technologies like HTML, CSS, and JavaScript.  
+        Apart from coding, I like exploring new tech, sharing knowledge, 
+        and working on projects that make an impact.  
+        In my free time, I enjoy traveling, playing chess, and reading about 
+        entrepreneurship and technology trends.  
+      </span>
+    </p>
+    <button onclick="toggleReadMore()" id="readMoreBtn" class="btn">Read More</button>
+  </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+  <h2 class="heading">Technical <span>Skills</span></h2>
+
+  <div class="services-container">
+    
+    <!-- Web Development -->
+    <div class="services-box">
+      <i class="fa-solid fa-code"></i>
+      <h3>Web Development</h3>
+      <p>
+        I build websites using modern technologies like HTML, CSS, JavaScript, Bootstrap, React, and Node.js. 
+        <span id="more-web" style="display: none;">
+          I focus on writing clean, scalable, and efficient code to create dynamic websites and full-stack applications. Whether it’s a portfolio, or e-commerce store, I design and develop solutions with both frontend and backend.
+        </span>
+      </p>
+      <button onclick="toggleReadMore('more-web','webBtn')" class="btn" id="webBtn">Read More</button>
+    </div>
+
+    <!-- Backend Development -->
+    <div class="services-box">
+      <i class="fa-solid fa-server"></i>
+        <h3>Backend Development</h3>
+        <p>Experienced in building robust server-side applications using Node.js, Express, and Java. 
+          <span id="more-backend" style="display: none;">
+            I can design and manage databases (MySQL, MongoDB), implement REST APIs, handle authentication, and ensure security for full-stack projects. My focus is on performance, scalability, and seamless integration with frontend systems.
+          </span>
+        </p>
+        <button onclick="toggleReadMore('more-backend','backendBtn')" class="btn" id="backendBtn">Read More</button>
+      </div>
+
+      <!-- Databse Managment -->
+      <div class="services-box">
+        <i class="fa-solid fa-database"></i>
+          <h3>Database Management</h3>
+          <p> Skilled in working with SQL and NoSQL databases like MySQL and MongoDB. 
+            <span id="more-db" style="display: none;">
+              I design database schemas, write optimized queries, and manage relationships to ensure data integrity and efficiency. I also work on indexing, performance tuning, and secure data handling for projects of all sizes.
+            </span>
+          </p>
+        <button onclick="toggleReadMore('more-db','dbBtn')" class="btn" id="dbBtn">Read More</button>
+      </div>
+
+      <!-- Problem Solving -->
+      <div class="services-box">
+        <i class="fa-solid fa-lightbulb"></i>
+        <h3>Problem Solving</h3>
+        <p> Strong in Data Structures and Algorithms with experience in competitive coding. 
+          <span id="more-problem" style="display: none;">
+            I have solved more than 300+ problems on platforms like LeetCode, Codeforces, and GFG. This helps me write optimized code and improve logical thinking, which I apply to real-world projects.
+          </span>
+        </p>
+        <button onclick="toggleReadMore('more-problem','problemBtn')" class="btn" id="problemBtn">Read More</button>
+      </div>
+
+      <!-- Rest Api Development -->
+      <div class="services-box">
+        <i class="fa-solid fa-network-wired"></i>
+        <h3>REST API Development</h3>
+        <p>
+          Skilled in building RESTful APIs using Spring Boot and Express.js to connect frontend with backend. 
+          <span id="more-api" style="display: none;">
+            I ensure APIs are well-structured, scalable, and optimized, enabling seamless data exchange between systems and third-party services.
+          </span>
+        </p>
+        <button onclick="toggleReadMore('more-api','apiBtn')" class="btn" id="apiBtn">Read More</button>
+      </div>
+
+      <!-- Spring boot -->
+      <div class="services-box">
+      <i class="fa-solid fa-diagram-project"></i>
+      <h3>Microservices Architecture</h3>
+      <p>
+        Experience in breaking monolithic applications into microservices using Spring Boot. 
+        <span id="more-micro" style="display: none;">
+          With service discovery, load balancing, and API gateway, I build scalable systems that are easier to maintain and deploy.
+          I work on clean architecture, and efficient server-side logic 
+          to support modern web and mobile applications.
+        </span>
+      </p>
+      <button onclick="toggleReadMore('more-micro','microBtn')" class="btn" id="microBtn">Read More</button>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading">My <span>Projects</span></h2>
+
+      <div class="portfolio-container">
+
+        <!-- Object Detection -->
+        <div class="portfolio-box">
+          <img src="images/Object_detect_img-2.png" alt="Object Detection Project">
+          <div class="portfolio-layer">
+            <h4>Object Detection Model</h4>
+            <p>
+              A machine learning project implementing object detection 
+              with image processing techniques. Designed to identify 
+              and classify objects in real-time, showcasing skills in 
+              Python, OpenCV, and deep learning.
+            </p>
+            <a href="https://github.com/mittalvansh504/Object_Detection_Model" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Job Portal -->
+        <div class="portfolio-box">
+          <img src="images/Online-job-portal_img-1.jpg" alt="Job Portal MERN">
+          <div class="portfolio-layer">
+            <h4>Job Portal (MERN)</h4>
+            <p>
+              A full-stack job portal built with MongoDB, Express.js, React, 
+              and Node.js. Includes user authentication, job listings, 
+              application management, and an admin dashboard for recruiters 
+              to manage applicants efficiently.
+            </p>
+            <a href="https://github.com/mittalvansh504/Job_Portal" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Travel Website -->
+        <div class="portfolio-box">
+          <img src="images/travel_img.png" alt="Travel Website">
+          <div class="portfolio-layer">
+            <h4>Travel Website</h4>
+            <p>
+              A responsive front-end project built with HTML, CSS, and JavaScript. 
+              Showcases destinations, packages, and booking features with a better design for an engaging travel experience.
+            </p>
+            <a href="https://github.com/mittalvansh504/Boostoing_Tourism_Industry" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Rock Paper Scissor -->
+        <div class="portfolio-box">
+          <img src="images/rock_paper_img3.png" alt="Rock Paper Scissors Game">
+          <div class="portfolio-layer">
+            <h4>Rock-Paper-Scissors Game</h4>
+            <p>
+              A fun and interactive game built using HTML, CSS, and JavaScript. 
+              Features real-time user vs computer gameplay with random choice 
+              generation, score tracking, and a clean responsive UI.
+            </p>
+            <a href="https://github.com/mittalvansh504/Rock_Paper_Sessior_by_Java" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+
+      <form action="https://formspree.io/f/xvgqenyj" method="POST">
+        <div class="input-box">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+
+        <div class="input-box">
+          <input type="text" name="phone" placeholder="Mobile Number">
+          <input type="text" name="subject" placeholder="Subject">
+        </div>
+
+        <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message" class="btn">
+      </form>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2025 by Vansh Mittal | All Rights Reserved</p>
+      </div>
+      <div class="footer-iconTop">
+        <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+      </div>
+    </footer>
+
+    <!-- Scroll Reveal JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Typed JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Main JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
