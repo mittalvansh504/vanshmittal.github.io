@@ -62,6 +62,22 @@ const typed = new Typed(".multiple-text", {
 });
 
 
+document.getElementById("readMoreBtn").addEventListener("click", function() {
+  const dots = document.getElementById("dots");
+  const moreText = document.getElementById("more");
+
+  if (moreText.style.display === "none" || moreText.style.display === "") {
+    moreText.style.display = "inline";
+    dots.style.display = "none";
+    this.textContent = "Read Less";
+  } else {
+    moreText.style.display = "none";
+    dots.style.display = "inline";
+    this.textContent = "Read More";
+  }
+});
+
+
 
 function toggleReadMore() {
   let dots = document.getElementById("dots");
