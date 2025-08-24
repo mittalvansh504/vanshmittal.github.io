@@ -222,11 +222,16 @@ span {
   border-radius: 0.6rem;
   font-size: 1.4rem;
   cursor: pointer;
-  transition: all 0.3s ease;  /* smooth animation */
+  transition: 0.3s ease;
+  /* color: #fff; */
 }
 
 #readMoreBtn:hover {
-  transform: scale(1.15);        /* darker shade on hover*/
+  background: #0086c9;
+}
+
+#more {
+  display: none;
 }
 
 
