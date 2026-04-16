@@ -1,4 +1,4 @@
-/*-----------------Toggle icon navbar ---------------------*/
+/*----------------- Toggle icon navbar ---------------------*/
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 
@@ -21,10 +21,14 @@ window.onscroll = () => {
     if (top >= offset && top < offset + height) {
       navLinks.forEach((links) => {
         links.classList.remove("active");
-        document
-          .querySelector('header nav a[href*="' + id + '"]')
-          .classList.add("active");
       });
+
+      let activeLink = document.querySelector(
+        'header nav a[href*="' + id + '"]'
+      );
+      if (activeLink) {
+        activeLink.classList.add("active");
+      }
     }
   });
 
@@ -50,9 +54,11 @@ ScrollReveal().reveal(
   { origin: "bottom" }
 );
 ScrollReveal().reveal(".home-content h1, .about-img", { origin: "left" });
-ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
+ScrollReveal().reveal(".home-content p, .about-content", {
+  origin: "right",
+});
 
-/*----------------- typed js ---------------------*/
+/*----------------- Typed JS ---------------------*/
 const typed = new Typed(".multiple-text", {
   strings: ["Software Developer", "Backend Developer"],
   typeSpeed: 70,
@@ -61,54 +67,94 @@ const typed = new Typed(".multiple-text", {
   loop: true,
 });
 
-
-
-function toggleReadMore() {
-  let dots = document.getElementById("dots");
-  let moreText = document.getElementById("more");
-  let btnText = document.getElementById("readMoreBtn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read More";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read Less";
-    moreText.style.display = "inline";
-  }
-}
-
-
+/*----------------- Read More (About + Skills FIXED) ---------------------*/
 function toggleReadMore(contentId, btnId) {
-  let moreText = document.getElementById(contentId);
-  let btnText = document.getElementById(btnId);
+  // About section (no params)
+  if (!contentId) {
+    let dots = document.getElementById("dots");
+    let moreText = document.getElementById("more");
+    let btnText = document.getElementById("readMoreBtn");
 
-  if (moreText.style.display === "none") {
-    moreText.style.display = "inline";
-    btnText.innerHTML = "Read Less";
-  } else {
-    moreText.style.display = "none";
-    btnText.innerHTML = "Read More";
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      moreText.style.display = "none";
+      btnText.innerHTML = "Read More";
+    } else {
+      dots.style.display = "none";
+      moreText.style.display = "inline";
+      btnText.innerHTML = "Read Less";
+    }
+  } 
+  // Skills section (with params)
+  else {
+    let moreText = document.getElementById(contentId);
+    let btnText = document.getElementById(btnId);
+
+    if (moreText.style.display === "none") {
+      moreText.style.display = "inline";
+      btnText.innerHTML = "Read Less";
+    } else {
+      moreText.style.display = "none";
+      btnText.innerHTML = "Read More";
+    }
   }
 }
 
-
+/*----------------- Portfolio Click Fix ---------------------*/
 document.addEventListener("DOMContentLoaded", () => {
   const projectLinks = {
-    "Object Detection Model": "https://github.com/mittalvansh504/Object_Detection_Model",
-    "Job Portal (MERN)": "https://github.com/mittalvansh504/Job_Portal",
-    "Travel Website": "https://github.com/mittalvansh504/Boostoing_Tourism_Industry",
-    "Rock-Paper-Scissors Game": "https://github.com/mittalvansh504/Rock_Paper_Sessior_by_Java"
+    "Object Detection Model":
+      "https://github.com/mittalvansh504/Object_Detection_Model",
+    "Job Portal (MERN)":
+      "https://github.com/mittalvansh504/Job_Portal",
+    "Travel Website":
+      "https://github.com/mittalvansh504/Boostoing_Tourism_Industry",
+    "Rock-Paper-Scissors Game":
+      "https://github.com/mittalvansh504/Rock_Paper_Sessior_by_Java",
   };
-  document.querySelectorAll(".portfolio-box").forEach(box => {
-    let title = box.querySelector("h4").innerText;
-    let githubIcon = box.querySelector("a");      
-    if (projectLinks[title]) {
-      githubIcon.addEventListener("click", e => {
+
+  document.querySelectorAll(".portfolio-box").forEach((box) => {
+    let title = box.querySelector("h4")?.innerText;
+    let githubIcon = box.querySelector("a");
+
+    if (projectLinks[title] && githubIcon) {
+      githubIcon.addEventListener("click", (e) => {
         e.preventDefault();
         window.open(projectLinks[title], "_blank");
       });
     }
   });
+});
+
+
+
+const cursor = document.createElement("div");
+cursor.classList.add("cursor-glow");
+document.body.appendChild(cursor);
+
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+
+
+document.querySelectorAll(".btn").forEach(btn => {
+  btn.addEventListener("mousemove", e => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width/2;
+    const y = e.clientY - rect.top - rect.height/2;
+
+    btn.style.transform = `translate(${x*0.2}px, ${y*0.2}px)`;
+  });
+
+  btn.addEventListener("mouseleave", () => {
+    btn.style.transform = "translate(0,0)";
+  });
+});
+
+window.addEventListener("mousemove", e => {
+  const img = document.querySelector(".home-img img");
+  let x = (window.innerWidth / 2 - e.pageX) / 30;
+  let y = (window.innerHeight / 2 - e.pageY) / 30;
+  img.style.transform = `translate(${x}px, ${y}px)`;
 });
