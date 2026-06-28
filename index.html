@@ -22,8 +22,6 @@
       <!-- <hr> -->
     <header class="header">
       <a href="#" class="logo">Vansh</a>
-      <i class="fa-solid fa-bars" id="menu-icon"></i>
-
       <nav class="navbar">
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
@@ -39,7 +37,9 @@
         <h3>Hello, I'm</h3>
         <h1>Vansh Mittal</h1>
         <h3>And I'm a <span class="multiple-text"></span></h3>
-        <p>I am a Computer Science student passionate about building scalable full-stack applications and exploring modern technologies such as Java, Spring Boot, the MERN stack, and Data Analytics. I enjoy developing impactful solutions including <b>Job Portals</b>, <b>Object Detection Systems</b>, and <b>MediSmart– AI Integrated Healthcare System</b>, while continuously learning and adapting to new frameworks and industry trends.</p>
+        <p>
+I am a Full Stack Developer with expertise in <b>Java</b>, <b>Spring Boot</b>, <b>React.js</b>, <b>Node.js</b>, <b>MongoDB</b>, <b>MySQL</b>, <b>REST APIs</b>, and <b>AWS</b>. I love building scalable, secure, and high-performance web applications while focusing on clean architecture, authentication, database design, and seamless user experiences. Passionate about solving real-world problems, I continuously explore new technologies and best practices to grow as a Software Engineer.
+</p>
 
         <div class="social-media">
           <a href="mailto:mittalvansh504@gmail.com" target="_blank"><i 
@@ -66,21 +66,29 @@
       </div>
 
       <div class="about-content">
-    <h2>About Me</h2>
-    <p>
-      Hi, I’m Vansh 👋, a passionate software developer and Web Developer, who loves creating 
-      clean, modern, and user-friendly websites. I enjoy solving problems 
-      and turning ideas into reality using code. <span id="dots"></span>
-      <span id="more">
-        I specialize in backend development with Java (Spring Boot, JDBC) 
-        and also have experience in frontend technologies like HTML, CSS, and JavaScript.  
-        Apart from coding, I like exploring new tech, sharing knowledge, 
-        and working on projects that make an impact.  
-        In my free time, I enjoy traveling, playing chess, and reading about 
-        entrepreneurship and technology trends.  
-      </span>
-    </p>
-    <button onclick="toggleReadMore()" id="readMoreBtn" class="btn">Read More</button>
+      <h2>About Me</h2>
+      <p>
+  Hi, I’m <b>Vansh</b> 👋, a passionate <b>Software Engineer</b> specializing in 
+  <b>Java</b>, <b>Spring Boot</b>, <b>React.js</b>, <b>Node.js</b>, and 
+  <b>REST API development</b>. I enjoy building scalable, secure, and user-friendly 
+  full-stack applications that solve real-world problems. <span id="dots"></span>
+
+  <span id="more">
+    I have hands-on experience developing applications using the 
+    <b>MERN Stack</b>, <b>Spring Boot</b>, <b>MySQL</b>, and <b>MongoDB</b>, with 
+    expertise in <b>JWT Authentication</b>, <b>Role-Based Access Control (RBAC)</b>, 
+    and database optimization. My projects include an 
+    <b>AI-Integrated Healthcare Management System</b>, an 
+    <b>Online Job Portal</b>, and a 
+    <b>Library Management System</b>. I also have a strong foundation in 
+    <b>Data Structures & Algorithms</b>, <b>OOP</b>, <b>DBMS</b>, and 
+    <b>Operating Systems</b>. I'm continuously learning cloud technologies like 
+    <b>AWS</b> and modern software development practices to grow as a backend and 
+    full-stack developer.
+  </span>
+</p>
+
+<button onclick="toggleReadMore()" id="readMoreBtn" class="btn">Read More</button>
   </div>
     </section>
 
@@ -91,13 +99,14 @@
   <div class="services-container">
     
     <!-- Web Development -->
+    <!-- Full Stack Development -->
     <div class="services-box">
       <i class="fa-solid fa-code"></i>
-      <h3>Web Development</h3>
+      <h3>Full Stack Development</h3>
       <p>
-        I build websites using modern technologies like HTML, CSS, JavaScript, Bootstrap and React.js
+        I develop modern, responsive, and scalable web applications using Java, Spring Boot, React.js, Node.js, and Express.js.
         <span id="more-web" style="display: none;">
-          I focus on writing clean, scalable, and efficient code to create dynamic websites and full-stack applications. Whether it’s a portfolio, or e-commerce store, I design and develop solutions with both frontend and backend.
+          From designing intuitive user interfaces to building secure backend systems, I create complete end-to-end solutions using REST APIs, MySQL, and MongoDB while following clean architecture and best coding practices.
         </span>
       </p>
       <button onclick="toggleReadMore('more-web','webBtn')" class="btn" id="webBtn">Read More</button>
@@ -106,65 +115,65 @@
     <!-- Backend Development -->
     <div class="services-box">
       <i class="fa-solid fa-server"></i>
-        <h3>Backend Development</h3>
-        <p>Experienced in building robust server-side applications using Node.js, Express, and Java. 
-          <span id="more-backend" style="display: none;">
-            I can design and manage databases (MySQL, MongoDB), implement REST APIs, handle authentication, and ensure security for full-stack projects. My focus is on performance, scalability, and seamless integration with frontend systems.
-          </span>
-        </p>
-        <button onclick="toggleReadMore('more-backend','backendBtn')" class="btn" id="backendBtn">Read More</button>
-      </div>
-
-      <!-- Database Management -->
-      <div class="services-box">
-        <i class="fa-solid fa-database"></i>
-          <h3>Database Management</h3>
-          <p> Skilled in working with SQL and NoSQL databases like MySQL and MongoDB. 
-            <span id="more-db" style="display: none;">
-              I design database schemas, write optimized queries, and manage relationships to ensure data integrity and efficiency. I also work on indexing, performance tuning, and secure data handling for projects of all sizes.
-            </span>
-          </p>
-        <button onclick="toggleReadMore('more-db','dbBtn')" class="btn" id="dbBtn">Read More</button>
-      </div>
-
-      <!-- Problem Solving -->
-      <div class="services-box">
-        <i class="fa-solid fa-lightbulb"></i>
-        <h3>Problem Solving</h3>
-        <p> Strong in Data Structures and Algorithms with experience in competitive coding. 
-          <span id="more-problem" style="display: none;">
-            I have solved more than 300+ problems on platforms like LeetCode, Codeforces, and GFG. This helps me write optimized code and improve logical thinking, which I apply to real-world projects.
-          </span>
-        </p>
-        <button onclick="toggleReadMore('more-problem','problemBtn')" class="btn" id="problemBtn">Read More</button>
-      </div>
-
-      <!-- Rest Api Development -->
-      <div class="services-box">
-        <i class="fa-solid fa-network-wired"></i>
-        <h3>REST API Development</h3>
-        <p>
-          Skilled in building RESTful APIs using Spring Boot and Express.js to connect frontend with backend. 
-          <span id="more-api" style="display: none;">
-            I ensure APIs are well-structured, scalable, and optimized, enabling seamless data exchange between systems and third-party services.
-          </span>
-        </p>
-        <button onclick="toggleReadMore('more-api','apiBtn')" class="btn" id="apiBtn">Read More</button>
-      </div>
-
-      <!-- Spring boot -->
-      <div class="services-box">
-      <i class="fa-solid fa-diagram-project"></i>
-      <h3>Microservices Architecture</h3>
+      <h3>Backend Development</h3>
       <p>
-        Experience in breaking monolithic applications into microservices using Spring Boot. 
-        <span id="more-micro" style="display: none;">
-          With service discovery, load balancing, and API gateway, I build scalable systems that are easier to maintain and deploy.
-          I work on clean architecture, and efficient server-side logic 
-          to support modern web and mobile applications.
+        I specialize in developing secure and scalable backend applications using Java, Spring Boot, JDBC, and Node.js.
+        <span id="more-backend" style="display: none;">
+          My expertise includes REST API development, JWT Authentication, Spring Security, Role-Based Access Control (RBAC), database optimization, and integrating frontend applications with reliable backend services.
         </span>
       </p>
-      <button onclick="toggleReadMore('more-micro','microBtn')" class="btn" id="microBtn">Read More</button>
+      <button onclick="toggleReadMore('more-backend','backendBtn')" class="btn" id="backendBtn">Read More</button>
+    </div>
+
+    <!-- Database & API -->
+    <div class="services-box">
+      <i class="fa-solid fa-database"></i>
+      <h3>Database & API Development</h3>
+      <p>
+        Experienced with relational and NoSQL databases including MySQL and MongoDB.
+        <span id="more-db" style="display: none;">
+          I design efficient database schemas, optimize SQL queries, build RESTful APIs, and ensure secure, high-performance data management for scalable applications.
+        </span>
+      </p>
+      <button onclick="toggleReadMore('more-db','dbBtn')" class="btn" id="dbBtn">Read More</button>
+    </div>
+
+    <!-- Problem Solving -->
+    <div class="services-box">
+      <i class="fa-solid fa-lightbulb"></i>
+      <h3>Problem Solving</h3>
+      <p>
+        Passionate about Data Structures & Algorithms and writing optimized, efficient code.
+        <span id="more-problem" style="display: none;">
+          I have solved <b>500+</b> coding problems on platforms like LeetCode and GeeksforGeeks, strengthening my problem-solving skills and enabling me to build efficient, scalable software solutions.
+        </span>
+      </p>
+      <button onclick="toggleReadMore('more-problem','problemBtn')" class="btn" id="problemBtn">Read More</button>
+    </div>
+          <!-- REST API Development -->
+    <div class="services-box">
+      <i class="fa-solid fa-network-wired"></i>
+      <h3>REST API Development</h3>
+      <p>
+        I build secure and scalable RESTful APIs using Java Spring Boot and Express.js for modern web applications.
+        <span id="more-api" style="display: none;">
+          My APIs support CRUD operations, JWT Authentication, Role-Based Access Control (RBAC), request validation, database integration, and seamless communication between frontend, backend, and third-party services.
+        </span>
+      </p>
+      <button onclick="toggleReadMore('more-api','apiBtn')" class="btn" id="apiBtn">Read More</button>
+    </div>
+
+        <!-- Cloud & Deployment -->
+    <div class="services-box">
+      <i class="fa-solid fa-cloud"></i>
+      <h3>Cloud & Deployment</h3>
+      <p>
+        I deploy full-stack applications using modern cloud platforms and deployment tools.
+        <span id="more-cloud" style="display: none;">
+          I have deployed Spring Boot backends on Render and React applications on Vercel. I also have knowledge of AWS services such as EC2, S3, and IAM, and I continuously explore cloud technologies to build reliable and scalable applications.
+        </span>
+      </p>
+      <button onclick="toggleReadMore('more-cloud','cloudBtn')" class="btn" id="cloudBtn">Read More</button>
     </div>
   </div>
 </section>
@@ -176,37 +185,40 @@
 
       <div class="portfolio-container">
 
-      <!-- SmartMedi healthCare system -->
-        <div class="portfolio-box">
-          <img src="images/health_care.png" alt="Object Detection Project">
-          <div class="portfolio-layer">
-            <h4>MediSmart– AI Integrated Healthcare System</h4>
-            <p>
-              Developed 10+ RESTful APIs for managing patients, doctors, and appointment. 
-              Implemented authentication and role-based access control using JWT.
-              Integrated AI-powered chatbot using OpenAI API to automate patient queries and improve response time.
-            </p>
-            <a href="https://hospital-management-system-frontend-seven.vercel.app/" target="_blank">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
-        </div>
+      <!-- MediSmart Healthcare System -->
+<div class="portfolio-box">
+  <img src="images/health_care.png" alt="MediSmart AI Healthcare System">
+
+  <div class="portfolio-layer">
+    <h4>MediSmart – AI Integrated Healthcare System</h4>
+
+    <p>
+      Built a scalable full-stack healthcare platform using <b>Java, Spring Boot, React.js, and MongoDB</b>.
+      Implemented secure <b>JWT Authentication</b>, <b>Role-Based Access Control (RBAC)</b>, and REST APIs for patient, doctor, and appointment management. Integrated an <b>AI-powered healthcare assistant</b> to automate patient queries and deployed the application on <b>Render</b> and <b>Vercel</b>.
+    </p>
+
+    <a href="https://hospital-management-system-frontend-sepia.vercel.app/" target="_blank">
+      <i class="fa-solid fa-up-right-from-square"></i>
+    </a>
+  </div>
+</div>
 
         <!-- Library Management System -->
-        <div class="portfolio-box">
-          <img src="images/library_management.jpeg" alt="Library Management System">
-          <div class="portfolio-layer">
-            <h4>Online Library Management System</h4>
-            <p>
-              Constructed a web-based system to manage books, users, and issue/return operations.
-              Implemented authentication, search, and availability tracking.
-              Built backend services using Java, Spring Boot, JDBC, and relational databases
-            </p>
-            <a href="https://github.com/mittalvansh504/Library_Management" target="_blank">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
-        </div>
+<div class="portfolio-box">
+  <img src="images/library_management.jpeg" alt="Library Management System">
+
+  <div class="portfolio-layer">
+    <h4>Online Library Management System</h4>
+
+    <p>
+      Developed a full-stack library management system using <b>Java</b>, <b>Spring Boot</b>, <b>JDBC</b>, and <b>MySQL</b>. Implemented secure authentication, book search, issue/return workflows, and real-time availability tracking with an optimized relational database for efficient library operations.
+    </p>
+
+    <a href="https://github.com/mittalvansh504/Library_Management" target="_blank">
+      <i class="fa-brands fa-github"></i>
+    </a>
+  </div>
+</div>
 
 
         <!-- Object Detection -->
