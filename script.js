@@ -2,11 +2,6 @@
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 
-menuIcon.onclick = () => {
-  menuIcon.classList.toggle("fa-xmark");
-  navbar.classList.toggle("active");
-};
-
 /*----------------- Scroll section active link ---------------------*/
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
@@ -60,7 +55,7 @@ ScrollReveal().reveal(".home-content p, .about-content", {
 
 /*----------------- Typed JS ---------------------*/
 const typed = new Typed(".multiple-text", {
-  strings: ["Software Developer", "Backend Developer"],
+  strings: ["Software Developer", "Full Stack Developer", "Devops Engineer"],
   typeSpeed: 70,
   backSpeed: 70,
   backDelay: 1000,
